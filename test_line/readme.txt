@@ -4,3 +4,5 @@ Test_line
 2.ขอ Access Token << https://notify-bot.line.me/my/ 
   login line >> กด Generate Token >> copy key ไว้ใส่ใน .ino
 3.Uploadcode to ESP8266
+
+***ถ้าต้องการส่งข้อความภาษาไทยต้อง decode ก่อน http://meyerweb.com/eric/tools/dencoder/
