@@ -1,0 +1,17 @@
+#install_arduino1.6.x
+
+http://ubuntuhandbook.org/index.php/2015/11/install-arduino-ide-1-6-6-ubuntu/
+
+1.www.arduino.cc/en/Main/Software choose 1.6.xx
+
+2.cd ~/Downloads
+
+3.tar -xvf arduino-1.6.6-*.tar.xz
+
+4.sudo mv arduino-1.6.6 /opt
+
+5.cd /opt/arduino-1.6.6/
+
+6.chmod +x install.sh
+
+7.sudo ./install.sh
