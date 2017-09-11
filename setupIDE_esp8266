@@ -1,0 +1,14 @@
+http://www.thaieasyelec.com/article-wiki/embedded-electronics-application/getting-started-with-esp8266-nodemcu.html
+
+- ไปที่ Menu File >> Preferences
+- ใส่ URL >> ลงใน Addition Board Manager URLs: ดังนี้ 
+http://arduino.esp8266.com/stable/package_esp8266com_index.json
+(สามารถดูข้อมูลเพิ่มเติมหากมีการเปลี่ยนแปลงได้จาก   https://github.com/esp8266/Arduino)
+- แล้วกด OK
+- จากนั้นไปที่ Menu Tools >> Boar:”xxxxxx” >> Board Manager…
+- เลือก Type เป็น Contributed ไปที่ ESP8266 และกด Install 
+- รอจนติดตั้งเสร็จ
+- เมื่อติดตั้ง ESP8266 เสร็จเรียบร้อยแล้ว ให้ปิดโปรแกรม Arduino IDE ก่อน แล้วจึงเปิดขึ้นมาใหม่
+- เมื่อเปิดโปรแกรม Arduino IDE ขึ้นมาใหม่ ให้ลองไปที่ Menu Tools >> Board:”xxxxxx” 
+จะพบว่า มี Menu สำหรับเลือกใช้งาน ESP8266 กับ Arduino IDE ขึ้นมาให้เลือกใช้งานแล้วครับ
+***NodeMCU V2 เลือก NodeMCU1.0 12E modules
