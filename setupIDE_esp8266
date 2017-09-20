@@ -12,3 +12,4 @@ http://arduino.esp8266.com/stable/package_esp8266com_index.json
 - เมื่อเปิดโปรแกรม Arduino IDE ขึ้นมาใหม่ ให้ลองไปที่ Menu Tools >> Board:”xxxxxx” 
 จะพบว่า มี Menu สำหรับเลือกใช้งาน ESP8266 กับ Arduino IDE ขึ้นมาให้เลือกใช้งานแล้วครับ
 ***NodeMCU V2 เลือก NodeMCU1.0 12E modules
+if error **** sudo chmod 666 /dev/ttyUSB0
