@@ -1,9 +1,3 @@
-/*firebase:: ssid1 pass1 pub
-1st set ssid = "iPhone"
-        pass = "abcd1234"
-Go to firebase edit ssid1,pass1 and then set pub to 1 it will be sent firebase to esp8266   
-*/
-
 #include <EEPROM.h>
 #include "ESP8266WiFi.h"
 #include <FirebaseArduino.h>
@@ -13,6 +7,7 @@ Go to firebase edit ssid1,pass1 and then set pub to 1 it will be sent firebase t
 #define pass "abcd1234"
 #define FIREBASE_HOST "mutiwifi-4871a.firebaseio.com"
 #define FIREBASE_AUTH "dIpneH3aKMRgA3nMm36g7SnVGY2QfqRP4BnXXez2"
+#define LED_BUILTIN 2
 
 
 ESP8266WiFiMulti wifiMulti;
@@ -64,6 +59,8 @@ void setup() {
   Serial.begin(9600);
   delay(100);
 
+  pinMode(LED_BUILTIN, OUTPUT);
+
   Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
   
   //strcat(ssid1, "iPhone");
@@ -85,9 +82,11 @@ void loop() {
 
   if(wifiMulti.run() != WL_CONNECTED) {
         Serial.println("WiFi not connected!");
-        delay(1000);
+        digitalWrite(LED_BUILTIN, LOW);
+        delay(50);
     }
   else{
+    digitalWrite(LED_BUILTIN, HIGH);
     pub = Firebase.getInt("pub");
     Serial.print("ssid : ");
     Serial.println(WiFi.SSID());  
@@ -114,8 +113,13 @@ void loop() {
   readEEPROM(32,32,pass1);
   wifiMulti.addAP(ssid1, pass1);
   Serial.println("Update wifi");
-  delay(1000);
-
+  //delay(1000);
+  for (int i=0; i <= 5; i++){
+   digitalWrite(LED_BUILTIN, LOW);
+   delay(50);
+   digitalWrite(LED_BUILTIN, HIGH);
+   delay(50);
+  } 
   Firebase.setInt("pub", 0);
   
  }
