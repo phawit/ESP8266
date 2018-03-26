@@ -1,3 +1,9 @@
+/*firebase:: ssid1 pass1 pub
+1st set ssid = "iPhone"
+        pass = "abcd1234"
+Go to firebase edit ssid1,pass1 and then set pub to 1 it will be sent firebase to esp8266   
+*/
+
 #include <EEPROM.h>
 #include "ESP8266WiFi.h"
 #include <FirebaseArduino.h>
